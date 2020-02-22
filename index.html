@@ -13,30 +13,28 @@
 
 
         <!-- AR Libraries -->
-        <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
     </head>
     
-    <body>
+    <body data-gr-c-s-loaded="true">
         <a href="index.html"><img src="img/backbutton.png" height="30" width="33"></a> 
         <header>
-            <div class="bg-dark collapse show" id="navbarHeader"></div>
-                <div class="container"></div>
-                    <div class="col-sm-8 col-md-7 py-4"></div>
-                        <h4 class="text-red">About</h4>
+            <div class="bg-dark collapse show" id="navbarHeader" style>
+                <div class="container">
+                    <div class = "row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4 class="text-red">About</h4>
+                        <p class=
 
         </header>
         
 
 
         <!-- ################# -->
-        <a-scene arjs='trackingMethod: best; debugUIEnabled: false'>
-            <!-- All our components goes here -->
-            <a-marker preset="hiro">
-                <a-box position='0 0 0' material='color: blue;'>
-                </a-box>
-            </a-marker>
-            <a-entity camera></a-entity>
+        <a-scene embedded arjs='sourceType: webcam;'>
+            <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+            <a-marker-camera preset='hiro'></a-marker-camera>
         </a-scene>
 
     </body>
