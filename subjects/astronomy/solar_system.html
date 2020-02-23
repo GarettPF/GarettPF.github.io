@@ -1,0 +1,176 @@
+<html lang="en">
+    <head>
+        <title>Solar System</title>
+        <meta charset="utf-8">
+
+        <!-- include A-Frame obviously -->
+        <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+        <!-- include ar.js for A-Frame -->
+        <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+        <!-- Font awesome 4 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            body {
+                overflow: hidden;
+                background-color: rgb(134, 134, 134);
+            }
+
+            #header {
+                position: fixed;
+                height: 10vh; 
+                width: 100vw;
+                top: 0;
+                left: 0;
+                background-color: crimson;
+                z-index: 2;
+            }
+
+            #backButton {
+                color: black;
+                border-radius: 50%;
+                position: fixed;
+                height: 8vh;
+                width: 8vh;
+                top: 1vh;
+                left: 1vh;
+                font-size: 1rem;
+            }
+
+            #orbit {
+                position: fixed;
+                right: 1vh;
+                top: 1vh;
+                height: 8vh;
+                font-size: 3rem;
+                border-radius: 0.5rem;
+            }
+
+            #topic {
+                position: fixed;
+                top: 10vh;
+                left: 0;
+                width: 100vw;
+                margin: 0;
+                text-align: center;
+                background-color: grey;
+            }
+
+            #arjsDebugUIContainer, .a-enter-vr {
+                visibility: hidden;
+            } 
+        </style>
+    </head>
+
+    <body>
+
+        <div id="header">
+            <button id="backButton" onclick="window.location.href = 'index.html';"><i style="font-size: 2rem;" class="fa fa-arrow-circle-left"></i></button>
+            <button id="orbit" onclick="orbit_toggle()">Orbit Toggle</button>
+        </div>
+        <h1 id="topic">Solar System</h1>
+
+        
+        <a-scene embedded>
+        
+            <!-- models -->
+            <a-assets>
+                <a-asset-item id="sun" src="/models/planets/sun.gltf"></a-asset-item>
+                <a-asset-item id="mercury" src="/models/planets/mercury.gltf"></a-asset-item>
+                <a-asset-item id="venus" src="/models/planets/venus.gltf"></a-asset-item>
+                <a-asset-item id="earth" src="/models/planets/earth.gltf"></a-asset-item>
+                <a-asset-item id="mars" src="/models/planets/mars.gltf"></a-asset-item>
+                <a-asset-item id="jupiter" src="/models/planets/jupiter.gltf"></a-asset-item>
+                <a-asset-item id="saturn" src="/models/planets/saturn.gltf"></a-asset-item>
+                <a-asset-item id="neptune" src="/models/planets/neptune.gltf"></a-asset-item>
+                <a-asset-item id="uranus" src="/models/planets/uranus.gltf"></a-asset-item>
+                <a-asset-item id="pluto" src="/models/planets/pluto.gltf"></a-asset-item>
+            </a-assets>
+
+            <!-- Markers -->
+            <a-marker id="parts-marker" type='pattern' url='/markers/pattern-Solarsystem.patt'>
+                
+                <a-entity
+                    id="planet-group-1"
+                    position="0 0 0"
+                    scale="0.5 0.5 0.5">
+
+                    <a-entity
+                        gltf-model="#sun"
+                        position="0 0 0"
+                        scale="3 3 3">
+                    </a-entity>
+                    <a-entity
+                        gltf-model="#mercury"
+                        position="1.2 0 0"
+                        scale="0.5 0.5 0.5">
+                    </a-entity>
+                    <a-entity
+                        gltf-model="#uranus"
+                        position="0 0 8"
+                        scale="1 1 1">
+                    </a-entity>
+
+                </a-entity>
+
+
+                <a-entity
+                    id="planet-group-2"
+                    position="0.5 0.5 0.5"
+                    scale="1 1 1">
+
+                    <a-entity
+                    gltf-model="#venus"
+                        position="2 0 0"
+                        scale="0.5 0.5 0.5">
+                    </a-entity>
+                    <a-entity
+                        gltf-model="#mars"
+                        position="0 0 4"
+                        scale="1 1 1">
+                    </a-entity>
+                    <a-entity
+                        gltf-model="#saturn"
+                        position="-6 0 0"
+                        scale="1 1 1">
+                    </a-entity>
+                    <a-entity
+                        gltf-model="#pluto"
+                        position="9 0 0"
+                        scale="1 1 1">
+                    </a-entity>
+
+                </a-entity>
+
+                <a-entity
+                    id="planet-group-3"
+                    position="0.5 0.5 0.5"
+                    scale="1 1 1">
+
+                    <a-entity
+                        gltf-model="#earth"
+                        position="0 0 -3.4"
+                        scale="0.6 0.6 0.6">
+                    </a-entity>
+                    <a-entity
+                        gltf-model="#jupiter"
+                        position="5 0 0"
+                        scale="1 1 1">
+                    </a-entity>
+                    <a-entity
+                        gltf-model="#neptune"
+                        position="7 0 0"
+                        scale="1 1 1">
+                    </a-entity>
+                </a-entity>
+                    
+            </a-marker>
+      
+            <!-- add a simple camera -->
+            <a-entity camera></a-entity>
+        </a-scene>
+
+        <script src="/js/solar_system.js"></script>
+    </body>
+
+</html>

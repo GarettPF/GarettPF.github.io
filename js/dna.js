@@ -11,9 +11,8 @@ function combine_molecules() {
             helix.innerHTML = `
                 <a-entity
                     gltf-model="#DNA"
-                    position="0 0.3 0"
-                    scale="3 3 3">
-                    <a-animation attribute="rotation" dur="20000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation>
+                    position="0.4 0.7 -1"
+                    scale="2 2 2">
                 </a-marker>
             `;
         }
