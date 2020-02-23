@@ -16,8 +16,6 @@ function combine_molecules() {
                     <a-animation attribute="rotation" dur="5000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation>
                 </a-marker>
             `;
-
-            
         }
     }
 }
