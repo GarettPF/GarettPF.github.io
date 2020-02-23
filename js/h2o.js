@@ -3,28 +3,21 @@ var oxygen = document.getElementById("oxygen-marker"),
     button = document.getElementById("combine");
 
 
-function activate_button() {
-    button.disabled = false;
+function combine_molecules() {
+    if (hydrogen.object3D.visible == true) {
+        if (oxygen.object3D.visible == true) {
 
-    button.addEventListener("onkeyup", (e)=> {
-        console.log("fuck my ass!");
-    });
+            hydrogen.innerHTML = "";
+            oxygen.innerHTML = `
+                <a-entity
+                    gltf-model="#molecule"
+                    position="0 0 0"
+                    scale="2 2 2">
+                    <a-animation attribute="rotation" dur="5000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation>
+                </a-marker>
+            `;
+
+            
+        }
+    }
 }
-
-oxygen.addEventListener("markerFound", (e)=> {
-
-    while (hydrogen.object3D.visible == true) {
-        activate_button();
-    }
-    button.disabled = true;
-});
-
-hydrogen.addEventListener("markerFound", (e)=> {
-    
-    while (oxygen.object3D.visible == true) {
-        activate_button();
-    }
-    button.disabled = true;
-});
-
-
