@@ -9,28 +9,50 @@
         <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
         <!-- Font awesome 4 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Bootstrap 4 -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
         <style>
             body {
-                margin: 0px !important; 
                 overflow: hidden;
                 background-color: rgb(134, 134, 134);
             }
 
-            video {
-                height: 90vh !important;
-                position: fixed !important;
-                top: 10vh !important;
+            #header {
+                position: fixed;
+                height: 10vh; 
+                width: 100vw;
+                top: 0;
+                left: 0;
+                background-color: crimson;
             }
 
             #backButton {
                 color: black;
-                font-size: 3.5rem;
+                border-radius: 50%;
+                position: fixed;
+                height: 8vh;
+                width: 8vh;
+                top: 1vh;
+                left: 1vh;
+                font-size: 3rem;
+            }
+
+            #combine {
+                position: fixed;
+                right: 1vh;
+                top: 1vh;
+                height: 8vh;
+                font-size: 3rem;
+                border-radius: 0.5rem;
+            }
+
+            #topic {
+                position: fixed;
+                top: 10vh;
+                left: 0;
+                width: 100vw;
+                margin: 0;
+                text-align: center;
+                background-color: grey;
             }
 
             #arjsDebugUIContainer, .a-enter-vr {
@@ -41,9 +63,11 @@
 
     <body>
 
-        <div style="height: 10vh; width: 100vw; margin: 0; background-color: crimson;">
-            <a href="index.html" id="backButton"><i class="fa fa-arrow-circle-left"></i></a>
+        <div id="header">
+            <button id="backButton" onclick="window.location.href = 'index.html';"><i class="fa fa-arrow-circle-left"></i></button>
+            <button id="combine" disabled>Combine</button>
         </div>
+        <h1 id="topic">H2O Molecule</h1>
 
         
         <a-scene embedded>
