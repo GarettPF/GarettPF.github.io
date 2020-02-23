@@ -12,7 +12,7 @@ function combine_molecules() {
                 <a-entity
                     gltf-model="#molecule"
                     position="0 1 0"
-                    scale="2 2 2">
+                    scale="3 3 3">
                     <a-animation attribute="rotation" dur="5000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation>
                 </a-marker>
             `;
