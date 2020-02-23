@@ -11,7 +11,7 @@ function combine_molecules() {
             oxygen.innerHTML = `
                 <a-entity
                     gltf-model="#molecule"
-                    position="0 1 0"
+                    position="0 0 0"
                     scale="2 2 2">
                     <a-animation attribute="rotation" dur="5000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation>
                 </a-marker>
