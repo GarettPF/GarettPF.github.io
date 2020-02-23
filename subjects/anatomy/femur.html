@@ -1,6 +1,6 @@
 <html lang="en">
     <head>
-        <title>Chest</title>
+        <title>Femur</title>
         <meta charset="utf-8">
 
         <!-- include A-Frame obviously -->
@@ -68,23 +68,23 @@
             <button id="backButton" onclick="window.location.href = 'index.html';"><i style="font-size: 2rem;" class="fa fa-arrow-circle-left"></i></button>
             <!-- <button id="combine" onclick="combine_molecules()">Combine</button> -->
         </div>
-        <h1 id="topic">The Chest</h1>
+        <h1 id="topic">The Femur</h1>
 
         
         <a-scene embedded>
         
             <!-- models -->
             <a-assets>
-                <a-asset-item id="chest" src="/models/chest.gltf"></a-asset-item>
+                <a-asset-item id="femur" src="/models/femur.gltf"></a-asset-item>
             </a-assets>
 
             <!-- Markers -->
-            <a-marker id="parts-marker" type='pattern' url='/markers/pattern-anatomy.patt'>
+            <a-marker type='pattern' url='/markers/pattern-skull.patt'>
                 <a-entity
-                    gltf-model="#chest"
-                    position="0 0 0"
+                    gltf-model="#femur"
+                    position="-0.5 0.7 0"
                     scale="1 1 1">
-                    <a-animation attribute="rotation" dur="5000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation>
+                    <!-- <a-animation attribute="rotation" dur="5000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation> -->
 
                 </a-entity>
             </a-marker>
@@ -92,8 +92,6 @@
             <!-- add a simple camera -->
             <a-entity camera></a-entity>
         </a-scene>
-
-        <script src="/js/dna.js"></script>
     </body>
 
 </html>
