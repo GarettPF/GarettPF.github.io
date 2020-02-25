@@ -28,4 +28,5 @@ Hydrogen        |   Oxygen
 ![Image of skull](https://garettpf.github.io/Science.AR/img/pattern-skull.png)
 
 ## For the Astronomy Subject
+The solar system may take a while to load the many asset files
 ![Image of Solar System](https://garettpf.github.io/Science.AR/img/pattern-Solarsystem.png)
