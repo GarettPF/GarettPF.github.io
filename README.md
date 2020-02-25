@@ -3,6 +3,14 @@ Hackathon Project that was done within 24 hours
 - This is a webapp that was designed to implement Augmented Reality
   and make education more interactive for those who don't have access
   to certain materials that help students learn.
+  
+ # Compatibility
+ ~ IOS ~                  
+ - [X] Safari
+ - [ ] Chrome
+
+~ AndroidOS ~
+- [X] Chrome
 
 # Use the following images for tracking
 
