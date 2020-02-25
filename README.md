@@ -1,5 +1,6 @@
 # Science.AR
 Hackathon Project that was done within 24 hours
 
-
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+### Use the following images for tracking
+![Image of dna helix](https://garettpf.github.io/Science.AR/img/pattern-dnahelix.png)
+![Image of nitrogen bases](https://garettpf.github.io/Science.AR/img/pattern-nitrogenbases1.png)
